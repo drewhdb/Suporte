@@ -5,7 +5,7 @@ function verificaLogin($user, $password)
 {
     $conexao = criaConexao();
 
-    $sql = "SELECT * FROM usr where nome = '$user' and senha = '$password';";
+    $sql = "SELECT * FROM usr where usrnome = '$user' and usrsenha = '$password';";
 
     // Prepara a consulta
     $statement = $conexao->prepare($sql);

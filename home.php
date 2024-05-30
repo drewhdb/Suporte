@@ -13,14 +13,14 @@
     <?php include_once "./padroes/head.html"; ?>
 </head>
 <body>
-    <?php include_once "./padroes/menu.html"; ?>
+    <?php include_once "./padroes/menu.php"; ?>
 
     <div class="content-wrap">
         <header>
-            <button class="menu-button" id="open-button"></button>
+            <ion-icon class="expand" name="menu" id="open-button"></ion-icon>
         </header>
         <container>
-
+            
         </container>
     </div>
 

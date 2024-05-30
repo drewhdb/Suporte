@@ -15,10 +15,13 @@ body {
 }
 
 header{
+    min-height: 4em;
+    padding: 1em;
+
     display: flex;
     align-items: center;
     text-align: left;
-    justify-content: left;
+    justify-content: space-between;
     background-color: rgb(224, 224, 224, 0.5);
 }
 
@@ -122,20 +125,37 @@ textarea {
     overflow-y: hidden;
 }
 
+button {
+    border: none;
+}
+
+ion-icon {
+    font-size: 1.5em;
+    border: none;
+    color: #6d199d;
+}
+
+ion-icon:hover, ion-icon:focus {
+    filter: brightness(150%);
+}
 
 /* Menu */
 .menu-wrap {
-    background: #000000;
     position: fixed;
     top: 0;
     left: 0;
-    overflow-y: auto; 
     z-index: 1001;
+
+    display: grid;
+    grid-template-columns: 1fr;
 
     height: 100%; 
     width: 20%;
     min-width: 250px;
     padding: 1em 1.5em 0;
+
+    background: #000000;
+    overflow-y: auto; 
 
     -webkit-transform: translate3d(-120%,0,0);
     transform: translate3d(-120%,0,0);
@@ -157,18 +177,16 @@ textarea {
     background-color: #000;
 }
 
-.menu {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    row-gap: 1px;
-}
-
-.menu a, .menu .logo {
+.menu-head  {
     display: block;
-    padding: 0.5em;
     text-align: center;
     font-size: 1.5em;    
+    height: auto;
+    margin: 0;
+}
+
+.logo{
+    width: 8em;
 }
 
 .links a {
@@ -183,18 +201,6 @@ textarea {
     transition: 1s ease-in;
 }
 
-.menu .logo {
-    height: 4em;
-}
-
-.menu .logo_img{
-    width: 7em;
-}
-
-.menu .link, .menu .link-view {
-    height: 3em;
-}
-
 .icon50{
     font-size: 50px;
 }
@@ -203,29 +209,34 @@ textarea {
     font-size: 40px;
 }
 
-.menu .link, .link-view {
+.links .link, .links .link-view {
     display: grid;
     justify-content: center;
     text-align: center;
+    align-items: center;
 
+    height: 4em;
+    margin: 1em 0;
+}
+
+.links .link {
     background-color: #37009e;
     box-shadow: 0px 0px 10px #5900ff, 0px 0px 10px #5900ff inset ;
 }
 
-.menu .link-view{
+.links .link ion-icon {
+    color: #FFFFFF;
+}
+
+.links .link-view{
     background-color: #a200ff;
     box-shadow: 0px 0px 10px #9950c3, 0px 0px 10px #9950c3 inset ;
 }
 
 /* Menu Button */
-.menu-button, .close-button, .logout {
-    position: relative;
-    background: transparent;
-    border: none;
-
-    color: transparent;
-    text-indent: 2.5em;
-    font-size: 1.5em;
+.open {
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .usuario {
@@ -233,70 +244,24 @@ textarea {
     color: #f0f0f0;
 }
 
-.menu-button {
-    width: 2.5em;
-    height: 2.25em;
-    margin: 1em 0.3em;
-
-}
-
-.menu-button::before {
+.close, .logout {
     position: absolute;
-    background: linear-gradient(#6d199d 20%, transparent 20%, transparent 40%, #6d199d 40%, #6d199d 60%, transparent 60%, transparent 80%, #6d199d 80%);
-    top: 0.5em;
     right: 0.5em;
-    bottom: 0.5em;
-    left: 0.5em;
-    content: '';
+    cursor: pointer;
 }
 
-.close-button, .logout {
-    position: absolute;
-    width: 1.5em;
-    height: 1.5em;
-
-    text-indent: 1em;
-    font-size: 1em;
-    border: none;
-}
-
-.close-button {
-    right: 0.5em;
+.close {
     top: 0.5em;
 }
 
 .logout {
-    right: 1.25em;
-    top: 1.5em;
-    font-size: 1.5em;
+    top: 2em;
 }
 
-.logout a, .logout ion-icon {
-    color: #6d199d;
-}
-
-.close-button::before, .close-button::after {
-    content: '';
-    position: absolute;
-    width: 3px;
-    height: 100%;
-    top: 0;
-    left: 50%;
-    background: #6d199d;
-}
-
-.menu-button:hover, .menu-button:focus, .close-button:hover, .close-button:focus, .logout ion-icon:hover, .logout ion-icon:focus{
-    filter: brightness(150%);
-}
-
-.close-button::before {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.close-button::after {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+.expand {
+    font-size: 50px;
+    color: #9950c3;
+    cursor: pointer;
 }
 
 /* Shown menu */
