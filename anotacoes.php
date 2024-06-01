@@ -27,7 +27,7 @@
         </header>
         <container>
             <?php foreach ($cards as $card) {?>
-            <a href="./anotacoes/edit.php?<?= $card['ntaid']; ?>" class="card" id="<?= $card['ntaid']; ?>">
+            <a href="./anotacoes/edit.php?ntaid=<?= $card['ntaid']; ?>" class="card" id="<?= $card['ntaid']; ?>">
                 <?php if( $card['ntalink'] == 0) { ?>
                     <div class="cardheader">
                 <?php } else { ?>

@@ -12,6 +12,9 @@ body {
     font-weight: 400;
     font-size: 1em;
     color: #000;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 header{
@@ -88,9 +91,39 @@ input[type="search"]::-webkit-search-cancel-button{
     text-align: center;
     margin: 0 0.5em 0.3em 0;
 }
+input[type="checkbox"] {
+    margin: 0 0.5em 0.3em 0;
+    cursor: pointer;
+}
 
 input[type="date"] {
     justify-content: center;
+}
+
+.disabled {
+    background-color: #5452528f;
+}
+
+.textarea-content {
+    background-color: rgba(220, 220, 220, 0.5);
+    border: 1px #000 solid;
+    overflow-y: auto;
+    width: 15em;
+    min-height: 4em;
+    height: auto;
+    padding: 0.5em;
+    resize: none;
+}
+
+.textarea-content2 {
+    background-color: rgba(220, 220, 220, 0.5);
+    border: 1px #000 solid;
+    min-width: 15em;
+    width: 15em;
+    max-width: 30em;
+    min-height: 8em;
+    height: auto;
+    padding: 0.5em;
 }
 
 fieldset{
