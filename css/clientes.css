@@ -1,0 +1,13 @@
+container {
+    display: block;
+    grid-template-columns: no-repeat;
+    justify-content: left;
+}
+
+.cliente {
+    width: 100%;
+    padding: 1em;
+    border: solid 1px black;
+    background-color: rgb(247, 247, 247);
+    margin-bottom: 0.5em;
+}

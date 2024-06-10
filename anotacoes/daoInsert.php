@@ -7,6 +7,7 @@
     }
 
     $conexao = criaConexao();
+    $conexao->exec("set names utf8mb4");
 
     $sql = "SELECT usrid FROM usr where usrnome = '$_GET[ntacriador]' limit 1;";
     $statement = $conexao->prepare($sql);
